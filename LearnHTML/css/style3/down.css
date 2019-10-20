@@ -1,0 +1,91 @@
+.list2Header {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    background-color: cornsilk;
+    width: 1300px;
+}
+.list2Header hr {
+    display: inline-block;
+    width: 420px;
+    height: 10px;
+    border: 2px dotted #ff00ff;
+    background-color:aquamarine;
+}
+.secListHeader {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0 0 5px 0;
+}
+
+.secondlist {
+    width: 1300px;
+    margin: 30px auto;
+    padding: 20px 10px;
+    position: relative;
+    border:4px double yellowgreen;
+}
+
+.secondlist {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+.list-img {
+    display: block;
+    width: 400px;
+    margin: 10px;
+}
+.under-list-img {
+    display: block;
+    margin: 0px auto;
+    width: 1300px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #14cb42;
+    text-align: center;
+}
+
+.text {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    float: bottom;
+}
+
+.lastSection {
+    display: block;
+    margin: 0 auto;
+    width: 1300px;
+    background-color: pink;
+}
+
+.lastSection p {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.fotText {
+    display: block;
+    margin: 20px auto;
+    width: 1300px;
+    text-align: center;
+}
+
+/* ul.secondlist {
+    /* grid styles */
+    /* display: grid;
+    grid-template-columns: 500px 400px;
+    grid-template-rows: 1fr 1fr; */
+    /* units for row and column gaps
+     only available in px */
+    /* column-gap: 10px;
+    row-gap: 10px;
+  } */ 

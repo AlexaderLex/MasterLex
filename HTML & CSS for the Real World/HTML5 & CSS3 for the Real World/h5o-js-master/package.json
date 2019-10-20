@@ -1,0 +1,53 @@
+{
+  "name": "h5o",
+  "version": "0.11.3",
+  "description": "HTML5 outliner",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "in-publish && [ ! -z $TRAVIS_TAG ] && ls dist/outliner.min.js || in-install",
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h5o/h5o-js.git"
+  },
+  "author": {
+    "name": "Dominykas Blyžė",
+    "email": "hello@dominykas.com",
+    "url": "http://www.dominykas.com/"
+  },
+  "contributors": [
+    {
+      "name": "Jeffrey Yasskin",
+      "email": "jyasskin@gmail.com",
+      "url": "https://github.com/jyasskin"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h5o/h5o-js/issues"
+  },
+  "homepage": "https://github.com/h5o/h5o-js",
+  "devDependencies": {
+    "buster": "0.7.x",
+    "buster-reporter-sauce": "0.1.x",
+    "grunt": "1.x",
+    "grunt-browserify": "5.x",
+    "grunt-bump": "0.8.x",
+    "grunt-buster": "0.4.x",
+    "grunt-checkbranch": "1.x",
+    "grunt-checkpending": "1.x",
+    "grunt-cli": "1.x",
+    "grunt-contrib-clean": "1.x",
+    "grunt-contrib-uglify": "1.x",
+    "grunt-contrib-watch": "1.x",
+    "grunt-open": "0.2.x",
+    "grunt-saucelabs": "9.x",
+    "in-publish": "2.x",
+    "jsdom": "9.x",
+    "load-grunt-tasks": "3.x",
+    "phantomjs-prebuilt": "2.x",
+    "resolve-bin": "0.4.x",
+    "time-grunt": "1.x"
+  }
+}

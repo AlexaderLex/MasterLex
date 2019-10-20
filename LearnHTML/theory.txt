@@ -1,0 +1,599 @@
+                        Basic Elements
+
+
+The basic elements of an HTML page are:
+
+A text header, denoted using the <h1>, <h2>, <h3>, <h4>, <h5>, <h6> tags.
+A paragraph, denoted using the <p> tag.
+A horizontal ruler, denoted using the <hr> tag.
+A link, denoted using the <a> (anchor) tag.
+A list, denoted using the <ul> (unordered list), <ol> (ordered list) and <li> (list element) tags.
+An image, denoted using the <img> tag
+A divider, denoted using the <div> tag
+A text span, denoted using the <span> tag
+The next few pages will give an overview of these basic HTML elements.
+
+Each element can also have attributes - each element has a different set of attributes relevant to the element. There are a few global elements, the most common of them are:
+
+id - Denotes the unique ID of an element in a page. Used for locating elements by using links, JavaScript, and more.
+class - Denotes the CSS class of an element. Explained in the CSS Basics tutorial.
+style - Denotes the CSS styles to apply to an element. Explained in the CSS Basics tutorial.
+data-x attributes - A general prefix for attributes that store raw information for programmatic purposes. Explained in detailed in the Data Attributes section.
+Text headers and paragraphs
+There are six different types of text header you can choose from, h1 being the topmost heading with the largest text, and h6 being the most inner heading with the smallest text. In general, you should have only one h1 tag with a page, since it should be the primary description of the HTML page.
+
+As we've seen in the last example, a paragraph is a block of text separated from the rest of the text around it.
+
+Let's see an example of the <h1>, <h2> and <p> tags in action:
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>My First Page</h1>
+        <p>This is my first page.</p>
+        <h2>A secondary header.</h2>
+        <p>Some more text.</p>
+    </body>
+</html>
+Horizontal rulers
+A horizontal ruler <hr> tag acts as a simple separator between page sections.
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>My First Page</h1>
+        <p>This is my first page.</p>
+        <hr/>
+        <p>This is the footer - all rights are reserved to me.</p>
+    </body>
+</html>
+
+
+
+                            Links
+
+
+A link ("anchor") is a small span of text that will direct you to a different section in the page, or to a different page. To create a link, you will need to specify where you would like the user to be directed to when the link is clicked by specifying the href attribute.
+
+For example:
+
+<a href="https://www.google.com">A link to Google</a>
+To create a link to a different section in the same page, you will need to use a hash sign along with the element ID to where you would like the browser to jump to. For example:
+
+<a href="#faq">Click here to read the Frequently Asked Questions</p>
+The element ID is denoted using the id attribute:
+
+<h3 id="faq">Frequently asked questions</h3>
+<p>The first rule about fight club is that you do not talk about fight club.</p>
+Let's try it out:
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>My First Page</h1>
+        <p>This is my first page.</p>
+        <a href="#faq">Click here to read the Frequently Asked Questions</a>
+        <hr/>
+        <h3 id="faq">Frequently asked questions</h3>
+        <p>The first rule about fight club is that you do not talk about fight club.</p>
+        <p>However, if you do have questions, please e-mail me at foo@bar.com</p>
+
+    </body>
+</html>
+
+
+
+                                Lists
+
+
+HTML provides a way to create both an ordered list (with elements counting up, 1, 2, 3...) and an unordered list with bullets instead of numbers. Lists are a good way to formalize a list of items and let the HTML styling do the work for you.
+
+Ordered lists
+Here is an example of how to create an ordered list:
+
+<p>Here is a list of ordered items:</p>
+<ol>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+Ordered lists have a "type" attribute which defines the numbering convention to use.
+
+To count using numbers, use type="1":
+
+<p>Here is a list of ordered items:</p>
+<ol type="1">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+To count using uppercase letters, use type="A":
+
+<p>Here is a list of ordered items:</p>
+<ol type="A">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+To count using lowercase letters, use type="a":
+
+<p>Here is a list of ordered items:</p>
+<ol type="a">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+To count using uppercase roman numerals, use type="I":
+
+<p>Here is a list of ordered items:</p>
+<ol type="I">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+To count using lowercase roman numerals, use type="i":
+
+<p>Here is a list of ordered items:</p>
+<ol type="i">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+Unordered lists
+Here is an example of how to create an unordered list:
+
+<p>Here is a list of unordered items:</p>    
+<ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+To change the list style attributes, we can use the CSS attribute called list-style-type. The available types are:
+
+disc
+circle
+square
+none
+Here is an example of the disc list style type:
+
+<p>Here is a list of unordered items:</p>    
+<ul style="list-style-type: disc">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+Here is an example of the circle list style type:
+
+<p>Here is a list of unordered items:</p>    
+<ul style="list-style-type: circle">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+Here is an example of the square list style type:
+
+<p>Here is a list of unordered items:</p>    
+<ul style="list-style-type: square">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+Here is an example of the none list style type:
+
+<p>Here is a list of unordered items:</p>    
+<ul style="list-style-type: none">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+
+
+
+                                Images
+
+
+Images in HTML are inline elements that can be placed within a paragraph. To add an image, use the <img> tag along with the src attribute to specify the location of the image.
+
+<img src="/static/img/code.jpg">
+You may use JavaScript to trigger an event when an image finished loading.
+
+<img src="/static/img/code.jpg" onload="alert('image loaded')">
+Resizing the image can be done using the width and height attributes of an image, or alternatively by using CSS:
+
+<img src="/static/img/code.jpg" width="100">
+
+<img src="/static/img/code.jpg" style="width: 100px">
+Having an "alt" attribute set for the image is useful for when an image could not load or when you want to add a tooltip description that will be displayed when hovering on top of an image.
+
+<img src="/static/img/code.jpg" style="width: 100px" alt="A picture of some code">
+Image Types
+There are three main types of image formats which you should be using.
+
+Lossless formats - useful for when you need pixel-perfect graphics, for example for logos. The most common format is PNG. PNG also supports alpha transparency, meaning that you can use any background you want and overlay the image on top of that background.
+Lossy formats - useful for displaying rich images. Using a lossless format such as PNG would be an order of magnitude larger if used in such images. The most common format used in this category is JPG.
+Animated formats - useful for showing short animated images. The most common format is GIF, although it is a very old yet widely supported format, with many inherent drawbacks, such as a 256 color limit on each frame, and bad compression.
+Using the CSS float attribute with images
+Images can be set to float nearby text so they would blend with the text better. Notice the use of the clear CSS attribute - which directs the browser to break the floating effect after the first paragraph.
+
+<img src="/static/img/lab.png" style="float: left;">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p class="clear: both">Second paragraph</p>
+
+
+
+                            Styles
+
+
+CSS stands for Cascading Style Sheets, and is the visual language of the web. With it, we can design how HTML pages look like. CSS allows us to separate between the data of the page, encoded within the HTML, and the styling of the page, encoded in the CSS of the page.
+
+The reason that CSS is "Cascading" is because of the way it defines which styles to use. HTML elements inherit their styles in a "cascading" manner, according to a very specific set of priorities, from lowest to highest:
+
+1. The browser default
+2. Styles defined in the page
+3. Some styles will inherit a style to their childs, for example which font to use
+4. The last rule to be defined in the loading order will be the one that will kick into effect
+5. The element selector (for example, styling all <footer> elements)
+6. The class selector (for example, styling all .main elements)
+7. The ID selector, used to select a specific element in the page
+8. Media type (explained in the Media Queries section)
+9. Defining element specific CSS using an HTML "style" attribute
+10. The !important CSS override directive (Use this directive only as a last resort)
+
+
+In addition, there are relative "cascading" properties that can stack up relative to their parent, for example line height and font size, for example the rem (relative em) CSS metric which is defined relative to the parent, or the percentage unit.
+
+Defining CSS
+CSS can be defined using four methods:
+
+1. Inline
+To define a CSS style using the inline method, use the HTML style attribute:
+
+<p>This is the default serif font. It is commonly used in 
+printed media for better readability, since letters
+are more distinct in serif fonts.</p>
+
+<p style="font-family: sans-serif">This is a sans-serif font. 
+It is commonly used in screens because it is hard
+for screens to render letters with such great detail.</p>
+
+2. Using a CSS tag
+Defining CSS inline is not recommended at all, avoid it as much as you can. You should always define a CSS stylesheet and use selectors to apply the stylesheets. The Selectors tutorial will give a detailed tutorial on how to select HTML elements using CSS selectors.
+
+Here is an example:
+
+<!DOCTYPE html>
+<head>
+    <style>
+        .nice {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>This is the default serif font. It is commonly used in 
+    printed media for better readability, since letters
+    are more distinct in serif fonts.</p>
+
+    <p class="nice">This is a sans-serif font. 
+    It is commonly used in screens because it is hard
+    for screens to render letters with such great detail.</p>
+
+</body>
+3. Using a different stylesheet
+You can define a CSS stylesheet in an external file (usually noted with the .css extension) and load it.
+
+Here is an example for defining the same CSS class defined in the previous example, but in a file called "style.css".
+
+.nice {
+    font-family: sans-serif;
+}
+To load the CSS file, we would need to use the <link> HTML tag in the following manner:
+
+<link rel="stylesheet" href="nice.css">
+Please note that the stylesheet should be positioned properly relative to the HTML page. In this example, both the HTML file and the CSS file would need to be in the same directory.
+
+The link tag should be positioned inside the <head> section of the HTML page, like this:
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="nice.css">    
+</head>
+<body>
+    <p>This is the default serif font. It is commonly used in 
+    printed media for better readability, since letters
+    are more distinct in serif fonts.</p>
+
+    <p class="nice">This is a sans-serif font. 
+    It is commonly used in screens because it is hard
+    for screens to render letters with such great detail.</p>
+
+</body>
+4. Programmatic access
+HTML elements have the style attribute which you can use to add styles programmatically.
+
+For example:
+
+<!DOCTYPE html>
+<body>
+    <p id="serif-text">This is the default serif font. It is commonly used in 
+    printed media for better readability, since letters
+    are more distinct in serif fonts.</p>
+
+    <p class="nice" id="sans-serif-text">This is a sans-serif font. 
+    It is commonly used in screens because it is hard
+    for screens to render letters with such great detail.</p>
+
+    <script>
+        var sansSerifText = document.getElementById("sans-serif-text");
+        sansSerifText.style.fontFamily = "sans-serif";
+    </script>
+</body>
+
+
+
+                                    Classes
+
+
+CSS classes are commonly used to define a set of CSS styles and then apply them on an HTML element using selectors. To define a class within a CSS stylesheet, use the dot selector, as follows:
+
+<style>
+.nice {
+    font-family: sans-serif;
+}
+</style>
+Each HTML element can have a set of classes, ordered in a specific order. Each class will potentially add a set of CSS definitions according to the styles that were defined in the page. In this piece of code we have defined a CSS rule that will be applied to every element that contains the "nice" class. This means that once this piece of code has been defined inside the HTML page, the following HTML paragraph will have the style applied to it:
+
+<style>
+.nice {
+    font-family: sans-serif;
+}
+</style>
+<p class="nice">This is a short sentence.</p>
+HTML5 classList API
+HTML5 introduced a new way to edit the class list of an element using the classList collection. Each HTML element returns the collection by accessing the element.classList member. The class list allows to add, remove, toggle and to check if an element contains a specific class.
+
+Let's see an example:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .nice {
+        font-family: sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <p id="mytext">My text</p>
+    <script>
+        var el = document.getElementById("mytext");
+        el.classList.add("nice");    // adds the nice class to the paragraph
+        el.classList.remove("nice"); // removes the nice class from the paragraph
+        el.classList.toggle("nice"); // adds the nice class to the paragraph again, since it does not currently
+                                     // contain the nice class.
+
+        if (el.classList.contains("nice")) {
+            alert("The element contains the 'nice' class.");
+        }
+    </script>
+</body>
+</html>
+Since HTML5 is a relatively new standard, it is not supported on all browsers. It is safe enough to use today though. Here is the compatibility table for the feature: http://caniuse.com/#search=classlist
+
+
+
+                        Selectors
+
+
+CSS Selectors are extremely useful for defining a query on a subset of the elements on a page. Querying allows us to do one of two things - declare a style to apply on the set of elements in a CSS stylesheet, or receive a list of HTML elements programatically according to the query, using the querySelector method.
+
+Here is an example - if we would want to color all paragraphs in the document blue, we can simply write:
+
+<style>
+p {
+    color: blue;
+}
+</style>
+<p>I am blue</p>
+<p class="example">I am also blue</p>
+<p id="last" class="example">I am blue as well</p>
+The CSS selector "p" will select all "p" (paragraphs) in the page.
+
+We can add constraints on the query and apply a different CSS to some elements using a more specific selector. Let's color all "p" elements that have the "example" class with green. Note that in this example, the order of the CSS definitions does not matter since the second selector is more specific - therefore it will override the less specific CSS definition.
+
+<style>
+p.example {
+    color: green;
+}
+
+p {
+    color: blue;
+}    
+</style>
+<p>I am blue</p>
+<p class="example">I am green now</p>
+<p id="last" class="example">I am also green now</p>
+We can repeat the same process but this time adding an ID selector instead of the class selector.
+
+<style>
+p#last {
+    color: red;    
+}
+
+p.example {
+    color: green;
+}
+
+p {
+    color: blue;
+}    
+</style>
+<p>I am blue</p>
+<p class="example">I am green now</p>
+<p id="last" class="example">And now I am red</p>
+CSS selectors also support the comma tag, for applying the same style block to a number of elements. This example colors h1, h2 and h3 in blue and h4, h5 and h6 in red.
+
+<style>
+h1, h2, h3 {
+    color: blue;
+}
+
+h4, h5, h6 {
+    color: red;
+}
+</style>
+<h1>h1 title</h1>
+<h2>h2 title</h2>
+<h3>h3 title</h3>
+<h4>h4 title</h4>
+<h5>h5 title</h5>
+<h6>h6 title</h6>
+Descendant & Child Selectors
+Apart from specifying an element type, an ID and/or a class name, we can also create selectors that select a specific child only if it is contained in a specific hierarchy. For example, let's say we want to color all the <strong> tags in any paragraph that has the "strongblue" class.
+
+<style>
+.strongblue strong {
+    color: blue;    
+}
+</style>
+<p>This is the <strong>first</strong> sentence.</p>
+<p class="strongblue">This is the <strong>second</strong> sentence.</p>
+There are two types of child selectors - an ancestor selector like this one, and a direct child selector that only selects the first level of hierarchy from the parent element that was selected. Here is the same code but with a direct child selector:
+
+<style>
+.strongblue > strong {
+    color: blue;    
+}
+</style>
+<p>This is the <strong>first</strong> sentence.</p>
+<p class="strongblue">This is the <strong>second</strong> sentence.</p>
+If the <strong> element would have been encapsulated within a link, then this selector will not work since it relies on a direct parent-child relationship between .strongblue and the strong element.
+
+<style>
+.strongblue > strong {
+    color: blue;    
+}
+</style>
+<p>This is the <strong>first</strong> sentence.</p>
+<p class="strongblue">This is the <a><strong>second</strong></a> sentence.</p>
+querySelector and querySelectorAll methods
+HTML5 introduced the new document.querySelector and document.querySelectorAll methods which allows us to run the same selectors and receive the first element that corresponds to the selector, or a list of elements, depending on the method you use.
+
+Let's see an example:
+
+<p class="nice">This is a nice paragraph.</p>
+<p class="nice">This is another nice paragraph.</p>
+<p>This is a standard paragraph.</p>
+
+<script>
+    // this code colors the first nice paragraph in blue
+    var firstNiceParagraph = document.querySelector(".nice");
+    firstNiceParagraph.style.color = "blue";
+</script>
+
+
+                            Pseudo-classes
+
+
+HTML provides pseudo-classes, classes that are defined by default and allow us to apply a style on either:
+
+An element which is in a specific state.
+A specific set of elements by their hierarchy, explained in detail in the Advanced Selectors section.
+We will discuss the former in this page, and give examples for each pseudo-class. Keep in mind that there is no way of inlining pseudo-classes in CSS.
+
+Links
+A link can either be in an unvisited state or a visited state. An unvisited link is a link that was not clicked on. A visited link is a link that was clicked on.
+
+<style>
+a.special:link {
+    color: green;
+}
+
+a.special:visited {
+    color: red;
+}
+</style>
+
+<p><a href="#">This is a standard link, it will become purple when clicked</a></p>
+<p><a class="special" href="#">This is a special colored link and become red when clicked</a></p>
+Hover
+The CSS :hover pseudo-class can be used to define styles for HTML elements which the user is hovering upon using the mouse.
+
+<style>
+p:hover {
+    background-color: yellow;
+}
+</style>
+<p>Paragraphs now have a yellow background when hovering over them.</p>
+Active and Target
+The CSS :active pseudo-class defines the styles to use for an element which is currently being clicked.
+
+<style>
+a:active {
+    font-weight: bold;    
+}
+</style>
+<p>
+    <a href="#first">First Section</a>
+    <a href="#second">Second Section</a>
+    <a href="#third">Third Section</a>
+</p>
+Navigating to a specific section in the page also allows us to style the destination element.
+
+<style>
+p:target {
+    font-weight: bold;    
+}
+</style>
+<p>
+    <a href="#first">First Section</a>
+    <a href="#second">Second Section</a>
+    <a href="#third">Third Section</a>
+</p>
+<p id="first">This is the text of the first section.</p>
+<p id="second">This is the text of the second section.</p>
+<p id="third">This is the text of the third section.</p>
+Focus
+The CSS :focus pseudo-class defines the styles to use for an element which is focused.
+
+<style>
+input:focus {
+    font-weight: bold;    
+}
+</style>
+<form>
+    <p><input type="text" value="First field"></p>
+    <p><input type="text" value="Second field"></p>
+    <p><input type="text" value="Third field"></p>        
+</form>
+For more state-specific pseudo classes that relate to HTML form input elements, please visit Input Pseudo-classes.
+
+For advanced selectors that enable greater control on selecting specific elements, please visit Advanced Selectors.
+
+
+
+                UI Libraries
+
+
+                
+Over the years, many CSS & JavaScript libraries have been introduced. The CSS libraries ease the process of creating a beautiful website with little effort, and requires only very basic CSS knowledge to use. Since mastering CSS is a very hard task, the libraries enabled millions of developers to start creating websites easily, without previous knowledge in designing websites at all.
+
+Here are a few examples of CSS libraries that were recently introduced and are ranking high on Google:
+
+Bootstrap, by Twitter (http://getbootstrap.com/)
+Foundation, by Zurb (http://foundation.zurb.com/)
+Pure CSS, by Yahoo (http://purecss.io/)
+Bulma (based on the new CSS3 Flexbox specification - http://bulma.io/)
+Skeleton (http://getskeleton.com/)
+Semantic UI (http://semantic-ui.com/)

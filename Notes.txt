@@ -1,0 +1,208 @@
+
+<marquee behavior="" direction="left"></marquee><h2>by Lewis Carrol</h2></marquee>
+- делает текст бегущей строкой (direction="left";"right";"up";"down")
+
+<!-- <marquee behavior="slide" direction="down"scrollamount="20">  -->
+    <!-- scrollamount="20" (Amount : 20 pixels)-->
+    <!-- scrollamount="20" loop="2"(will repeat 2 times)-->
+    <!-- scrollamount="20" loop="infinite"(will repeat forever)-->
+    <!-- scrollamount="20" (Amount : 20 pixels)-->
+    <!-- Also change the speed of running text or so use scrolldelay="30"(Delay : 90 Milliseconds)-->
+    <!--marquee behavior="": alternate, scroll, slide-->
+
+Starting and stopping of scrolling by mouse over and mouse out
+Marquee Tag
+HTML Marquee tag
+Marquee Speed
+Marquee Behavior
+Marquee Direction
+Marquee Repeat
+Since Marquee HTML tag gives us scrolling text in web pages we can use them for various purposes in our page design. One of the common use is scrolling news items in the web page which continuously display scrolling messages. We will learn how to stop this scrolling by placing Mouse pointer over this and again starts scrolling once the mouse is taken out of the scrolling area. 
+
+WE will be using OnMouseover and OnMouseout event triggers. To indentify the message div area we will assign one id value to it through getElementById. Here is the code to do this.
+
+********************************
+<marquee id='scroll_news' style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#000080" ><div onMouseOver="document.getElementById('scroll_news').stop();" onMouseOut="document.getElementById('scroll_news').start();">News 1   News 2  News 3 News 4 ....... More news here </div></marquee>
+As you have seen the scrolling news stops when mouse pointer is kept over them and starts scrolling again when mouse is removed.
+***********************************
+
+________________________________________________
+Marquee with mousedown and mouseup events
+We can stop scrolling by clicking the mouse left button and holding it. On release of the button the scroll will start again.
+News 1 News 2 News 3 News 4 ....... More news here
+******************************
+ <marquee id='scroll_news2' style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#000080" ><div onMousedown="document.getElementById('scroll_news2').stop();" onMouseUp="document.getElementById('scroll_news2').start();">News 1   News 2  News 3 News 4 ....... More news here </div></marquee>
+*******************************
+________________________________________________
+
+________________________________________________
+Adding Links to Scrolling text
+Note that each item can be a different link to different pages or news links so let us try displaying each news item with hyper links to different pages. WE have kept links to different sections of the plus2net here.
+***************************
+<marquee id='scroll_news' style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#000080" ><div onMouseOver="document.getElementById('scroll_news').stop();" onMouseOut="document.getElementById('scroll_news').start();"><a href=../php_tutorial/site_map.php>PHP</a>  | <a href=../sql_tutorial/site_map.php>SQL</a>  |  <a href=../>plus2net Home</a></div></marquee>
+*******************************
+The same events can be triggered by onmouseup and onmousedown events
+________________________________________________
+________________________________________________
+Starting and stopping scrolling text by using Start and Stop button
+We will try to control the start and stop of the scrolling of marquee tag through one pair of buttons. We will connect start of scrolling to one button and stopping of scrolling to another button. Here is the code to do that.
+***********************************
+<marquee id='scroll_news2' style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#000080" >News 1   News 2  News 3 News 4 ....... More news here </marquee>
+<input type=button onClick="document.getElementById('scroll_news2').stop();" value='Stop Scrolling'> <input type=button onClick="document.getElementById('scroll_news2').start();" value='Start Scrolling'>
+*************************************************
+News 1 News 2 News 3 News 4 ....... More news here  
+________________________________________________
+
+________________________________________________
+
+Using single button
+By adding a JavaScript function which takes care of label on the button and manage the stop or start action. 
+
+We will use getElementById to read the value and the Label on the button. 
+
+By using one if condition we will see if the button label ( value ) is Start then we will make it Stop and start the scrolling. Similarly if the label is Stop then we will make it Start and stop the scrolling. 
+
+News 1 News 2 News 3 News 4 ....... More news here  
+
+Here is the code
+****************************************
+<marquee id='scroll_news4' style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#000080" >News 1 News 2 News 3 News 4 ....... More news here </marquee>
+
+<input type='Button' value='Stop' id ='b1' onClick='button_click()';>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function button_click()
+{
+if(document.getElementById('b1').value=="Start"){
+document.getElementById('b1').value="Stop";
+document.getElementById('scroll_news4').start();
+}else{
+document.getElementById('b1').value="Start";
+document.getElementById('scroll_news4').stop();
+}
+}
+
+// End -->
+</script>
+************************************
+
+
+<!-- tag <strong></strong> - выделяет текст жирным;
+ tag <big></big> - Делает текст больше
+ tag <small></small> - делает текст меньше
+ tag <u></u> - подчеркивает текст
+ tag <i></i> - делает текст курсивным
+ tag <span class="cursive"></span> - выделяет логически (выглядит как курсив)
+ tag <mark></mark> - заливает текс желтым цветом
+ tag <s></s> - делает текст зачеркнутым
+ tag <b></b> - выделяет текст жирным
+ &spansp -  добаляет ТАБ перед текстом-->
+
+ <hr align="center" width="400" color="green" noshade size="6"> - 
+ - свойства горизонтальной линии на странице
+ align - center; left; right;
+ width - ширина линии
+ color - цвет линии
+ noshade - тень линии
+ size - толщина линии (=)
+
+			Выравнивание элементов при использовании position: relative; и position: absolute;		
+
+в элементах с position: absolute margin не задается. 
+позиционирование элементов осуществляется с помощью свойства
+top: 
+left:
+bottom:
+right:		
+
+
+ H <sub>2</sub>O 
+ tag <sub></sub> - превращает число или цифру в нижний индекс
+ tag <sup></sup> - превращает число, цифру или букву в верхний индекс(квадрат)
+
+     f <sub>u</sub>c <sub>k</sub>
+    <br>
+    s<sup>h</sup>i<sup>t</sup>
+
+    Семантические теги в HTML5
+
+    </header>
+    <nav></nav> <!-- Навигационное меню -->
+    <article></article> <!-- Оформление записи в блоге -->
+    <section></section> <!-- Секции на сайте -->
+    <aside></aside> <!-- Боковые колонки с информацией> -->
+    <main></main> <!-- Основное содержание документа -->
+    <address></address> <!-- Тег для размещения в нем адреса компании, юр.лица и т.д. -->
+    <footer></footer> <!-- "Подвал" сайта, нижняя часть страцицы -->
+
+    Все элементы на странице делятся на три вида:
+
+    1. Блочные элементы; block
+    2. Строчные элементы; inline    
+    3. Строчно-блочные элементы. inline-block
+
+    Чтобы правильно позиционировать один элемент внутри другого, то нужно
+    в родительском элементе свойство ( position: relative;) - ОБЯЗАТЕЛЬНО!!! ставить
+    - ОТНОСИТЕЛЬНОЕ RELATIVE, а у дочернего элемента позиционирование - АБСОЛЮТНОЕ
+    (position: absolute;)
+
+			Blink effect in CSS
+
+.blink {
+    animation: blinker 0.9s linear infinite;
+    color: #1c87c9;
+   }
+  @keyframes blinker {  
+    50% { opacity: 0; }
+   }
+   .blink-one {
+     animation: blinker-one 1.6s linear infinite;
+   }
+   @keyframes blinker-one {  
+     0% { opacity: 0; }
+   }
+   .blink-two {
+     animation: blinker-two 2.4s linear infinite;
+   }
+   @keyframes blinker-two {  
+     100% { opacity: 0; }
+   }
+
+
+				Blink effect in JavaScript
+
+
+function blink() {
+  var blinks = document.getElementsByClassName('blink');
+  for (var i = blinks.length - 1; i >= 0; i--) {
+    var s = blinks[i];
+    s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+  }
+  window.setTimeout(blink, 1000);
+}
+if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
+else if (window.addEventListener) window.addEventListener("load", blink, false);
+else if (window.attachEvent) window.attachEvent("onload", blink);
+else window.onload = blink;
+
+
+
+
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  CSS-Code;
+}
+meaning of the not, only and and keywords:
+
+not: The not keyword reverts the meaning of an entire media query.
+
+only: The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. It has no effect on modern browsers.
+
+and: The and keyword combines a media feature with a media type or other media features.
+
+They are all optional. However, if you use not or only, you must also specify a media type.
+
+You can also have different stylesheets for different media, like this:
+
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">

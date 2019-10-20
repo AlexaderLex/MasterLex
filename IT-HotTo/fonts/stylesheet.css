@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Russo One';
+    src: url('RussoOne-Regular.eot');
+    src: url('RussoOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RussoOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('MyriadPro-Regular.eot');
+    src: url('MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

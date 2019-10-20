@@ -1,0 +1,44 @@
+Header - IT HowTO:
+russo
+Header-text:
+Arial, Helvetica,sans-serif
+
+
+
+Menu-right:
+
+"Trebuchet MS", Arial, Helvetica, sans-serif;
+
+
+
+
+SideBar Header and elements
+Arial, Helvetica, sans-serif;
+
+Article - Header
+syvenir, sans-serif;
+
+Article - Добавлено
+
+miriad
+
+Article - content
+Arial, Helvetica, sans-serif;
+
+Читать дальше:
+Arial, Helvetica, sans-serif;
+
+Разделы, теги:
+miriad
+
+paging:
+Arial, Helvetica, sans-serif;
+
+footer, IT HowTO
+russo
+
+footer,text:
+arial, Helvetica, sans-serif
+
+
+

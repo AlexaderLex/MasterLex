@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+
+/* figure out what this means */
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  top: -4px;
+  right: 5px;
+  color: transparent;
+  /* read up on this */
+  text-shadow: 0 0 4px white;
+}
+
+#counter {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  position: absolute;
+  margin: 0;
+  color: white;
+  top: 42px;
+  right: 78px;
+}
